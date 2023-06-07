@@ -89,7 +89,11 @@
                 Your comment was not posted!
               </div>
             </div>
-            ul.px-4.mb-3.ml-7.
+            <ul class="px-4 mb-3 ml-7 list-decimal">
+                {% for error in form.errors %}
+                    
+                {% endfor %}
+            </ul>
           </div>
         {% elsif form.posted_successfully? %}
           Your comment was posted successfully!
