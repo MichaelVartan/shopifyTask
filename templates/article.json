@@ -17,6 +17,11 @@
           "type": "article_published_date",
           "settings": {
           }
+        },
+        "thumbnail": {
+          "type": "featured_image",
+          "settings": {
+          }
         }
       },
       "block_order": [
