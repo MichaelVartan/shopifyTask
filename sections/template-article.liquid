@@ -172,9 +172,9 @@
     "description":{ {{ article.excerpt | strip_html | json }}},
   {% endif %},
   {% if article.image %}
-    "image":[
+    "image":{[
      {{ article.image | img_url: 'medium' | prepend: 'https:' | json }} 
-    ],
+    ],},
   {% endif %}
   "datePublished":{ {{ article.published_at | date: format: "default" | json }}},
   "dateCreated":{ {{ article.created_at | date: format: "default" | json }}},
