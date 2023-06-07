@@ -10,7 +10,7 @@
 
       {% if article.excerpt.size > 0  %}
         {% else %}
-            <p></p>
+            <p>{{article.content | strip}}</p>
       {% endif %}
     </div>
 
