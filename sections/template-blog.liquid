@@ -15,7 +15,7 @@
                 {{ 'image' | placeholder_svg_tag: 'w-full h-80 object-cover bg-gray-100' }}
               {% endif %}
 
-              <h1>{{ article.title }}</h1>
+              <h1 class="text-xl font">{{ article.title }}</h1>
 
               {% if article.excerpt.size > 0 %}
                 <p>{{ article.excerpt | strip_html | truncatewords: section.settings.number_of_words }}</p>
