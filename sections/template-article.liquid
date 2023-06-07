@@ -1,6 +1,9 @@
 {% for block in section.blocks %}
   {% case block.type %}
     {% when "article_title" %}
+    <h1>
+      {{ article.title }}
+    </h1>
     {% when "article_author" %}
     {% when "article_published_date" %}
     {% when "featured_image" %}
@@ -11,9 +14,7 @@
   {% endcase %}
 {% endfor %}
 
-<h1>
-  {{ article.title }}
-</h1>
+
 {% if section.settings.enable_author %}
   <small>
     {{ article.author }}
