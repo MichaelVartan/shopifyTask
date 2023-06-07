@@ -6,4 +6,4 @@
   {{ article.author }}
 </small>
 
-<time datetime="{{ article.published_at }}"></time>
+<time datetime="{{ article.published_at | date: '%Y'  }}"></time>
