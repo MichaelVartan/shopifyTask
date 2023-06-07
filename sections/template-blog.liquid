@@ -15,11 +15,11 @@
               <h1>{{ article.title }}</h1>
 
               {% if article.excerpt.size > 0 %}
-                <p></p>
-                {% else %}
-                  {% if section.settings.show_description %}
-                    <p>{{ article.content | strip_html | truncatewords: section.settings.number_of_words }}</p>
-                  {% endif %}
+                <p>{{ article.excerpt | strip_html | truncatewords: section.settings.number_of_words }}</p>
+              {% else %}
+                {% if section.settings.show_description %}
+                  <p>{{ article.content | strip_html | truncatewords: section.settings.number_of_words }}</p>
+                {% endif %}
 
               {% endif %}
             </div>
