@@ -176,7 +176,8 @@
                 {{ article.image | img_url: 'medium' | prepend: 'https:' |json}}
             ],
         {% endif %}
-        "datePublished": {{ article.published_at | date: format: "default"  }}
+        "datePublished": {{ article.published_at | date: format: "default"  }},
+        "datePublished": {{ article.created_at | date: format: "default"  }}
     }
 </script>
 
