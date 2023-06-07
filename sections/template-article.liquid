@@ -22,7 +22,9 @@
         </div>
       </div>
       {% when "article_published_date" %}
-        div.flex.it
+        <div class="flex items-center justify-center">
+            
+        </div>
       {% if section.settings.enable_published_date %}
         <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
       {% endif %}
