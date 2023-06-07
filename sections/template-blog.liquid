@@ -6,22 +6,22 @@
         {% for article in blog.articles %}
           <div class="w-full py-6 px-3">
             <div class="bg-white shadow-xl rounded-lg overflow-hidden">
-                
-            </div>
-                {% if article.image != blank %}
+              {% if article.image != blank %}
                 <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}">
-                {% else %}
+              {% else %}
                 {{ 'image' | placeholder_svg_tag: 'w-20' }}
-                {% endif %}
-                <h1>{{ article.title }}</h1>
+              {% endif %}
+              <h1>{{ article.title }}</h1>
 
-                {% if article.excerpt.size > 0 %}
+               {% if article.excerpt.size > 0 %}
                 {% else %}
-                    {% if section.settings.show_description %}
-                        <p>{{ article.content | strip_html | truncatewords: section.settings.number_of_words }}</p>
-                    {% endif %}
+                  {% if section.settings.show_description %}
+                    <p>{{ article.content | strip_html | truncatewords: section.settings.number_of_words }}</p>
+                  {% endif %}
 
-                {% endif %}
+              {% endif %}
+            </div>
+
           </div>
         {% endfor %}
       </div>
