@@ -1,12 +1,12 @@
 <h1>
   {{ article.title }}
 </h1>
-{% if seciton.settings.enable %}
-    
+{% if section.settings.enable_author %}
+  <small>
+    {{ article.author }}
+  </small>
 {% endif %}
-<small>
-  {{ article.author }}
-</small>
+
 
 <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
 <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
