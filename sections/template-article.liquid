@@ -169,7 +169,7 @@
           "headline":{{ article.title | json }},
   "articleBody":{{ article.content | strip_html | json }},
   {% if article.excerpt != blank %}
-    "description": {},
+    "description": {{ article.excerpt | strip_html | json }},
   {% endif %},
   {% if article.image %}
     "image":[
