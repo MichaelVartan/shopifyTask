@@ -1,8 +1,8 @@
 {
-	"name": "Template Product",
+	"name": "Template Article",
 	"sections": {
 		"template": {
-			"type": "template-product"
+			"type": "template-article"
 		}
 	},
 	"order": ["template"]
