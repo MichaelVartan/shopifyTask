@@ -29,7 +29,7 @@
 
               {% endif %}
 
-              <a href="{{article.url}}">Read More</a>
+              <a href="{{article.url}}" class="font">{{ sections.settings.blog_read_more }}</a>
             </div>
 
           </div>
@@ -69,6 +69,11 @@
         "label": "Number of words per description",
         "default": 15
 
+      }, {
+        "type": "text",
+        "id": "blog_read_more",
+        "label": "Read more label",
+        "default": "Read more"
       }
 
     ]
