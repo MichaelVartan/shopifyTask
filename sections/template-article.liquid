@@ -30,6 +30,7 @@
         </div>
       </div>
       {% when "featured_image" %}
+        div.max-w-7xl
       <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
       {% when "article_content" %}
       <div>
