@@ -1,14 +1,14 @@
 {% for block in section.blocks %}
-    {% case block.type %}
-        {% when "article_title" %}
-        {% when "article_author" %}
-        {% when "article_published_date" %}
-        {% when "article_title" %}
-        {% when "article_title" %}
-            
-        {% else %}
-            
-    {% endcase %}
+  {% case block.type %}
+    {% when "article_title" %}
+    {% when "article_author" %}
+    {% when "article_published_date" %}
+    {% when "featured_image" %}
+    {% when "article_content" %}
+
+{% else %}
+
+  {% endcase %}
 {% endfor %}
 
 <h1>
