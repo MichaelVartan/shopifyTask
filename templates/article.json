@@ -21,7 +21,8 @@
       },
       "block_order": [
         "title",
-        "author"
+        "author",
+        "published_date"
       ],
       "settings": {
       }
