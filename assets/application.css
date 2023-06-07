@@ -1014,6 +1014,10 @@ video {
     height: 24rem;
   }
 
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:flex-1 {
     flex: 1 1 0%;
   }
