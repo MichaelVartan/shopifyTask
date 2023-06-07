@@ -11,7 +11,7 @@
       {% if article.excerpt.size > 0 %}
         {% else %}
           {% if section.settings.show_description %}
-            <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
+            <p>{{ article.content | strip_html | truncatewords: se }}</p>
           {% endif %}
 
       {% endif %}
