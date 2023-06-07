@@ -10,6 +10,9 @@
 
       {% if article.excerpt.size > 0 %}
         {% else %}
+            {% if condition %}
+                
+            {% endif %}
           <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
       {% endif %}
     </div>
