@@ -1,36 +1,33 @@
 <article>
-    {% for block in section.blocks %}
-  {% case block.type %}
-    {% when "article_title" %}
-        <div class="flex item-center justify-center">
-            <div class="max-w-7xl">
-                h1.text-4xl.md:text-6xl.font-medium
-            </div>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when "article_title" %}
+      <div class="flex item-center justify-center">
+        <div class="max-w-7xl">
+          <h1 class="text-4xl md:text-6xl font-medium">{{ article.title }}</h1>
         </div>
-        <h1>{{ article.title }}</h1>
-    {% when "article_author" %}
-        {% if section.settings.enable_author %}
-            <small>
-                {{ article.author }}
-            </small>
-        {% endif %}
-    {% when "article_published_date" %}
-        {% if section.settings.enable_published_date %}
-            <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
-        {% endif %}
-    {% when "featured_image" %}
-        <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
-    {% when "article_content" %}
-        <div>
-            {{ article.content }}
-        </div>
-{% else %}
-  {% endcase %}
-{% endfor %}
+      </div>
+      
+      {% when "article_author" %}
+      {% if section.settings.enable_author %}
+        <small>
+          {{ article.author }}
+        </small>
+      {% endif %}
+      {% when "article_published_date" %}
+      {% if section.settings.enable_published_date %}
+        <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
+      {% endif %}
+      {% when "featured_image" %}
+      <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
+      {% when "article_content" %}
+      <div>
+        {{ article.content }}
+      </div>
+  {% else %}
+    {% endcase %}
+  {% endfor %}
 </article>
-
-
-
 
 
 
