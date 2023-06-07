@@ -10,6 +10,9 @@
         {% endif %}
     {% when "article_published_date" %}
         
+        {% if section.settings.enable_published_date %}
+            <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
+        {% endif %}
     {% when "featured_image" %}
     {% when "article_content" %}
 
@@ -20,9 +23,6 @@
 
 
 
-{% if section.settings.enable_published_date %}
-  <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
-{% endif %}
 
 <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
 
