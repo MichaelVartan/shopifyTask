@@ -79,16 +79,15 @@
     {% form 'new_comment', article %}
       <div class="flex1 mx-auto item-center justify-center max-w-4xl px-4">
         {% if form.errors %}
-          Your comment was not posted!
+
           <div class="border p-5">
             <div class="flex flex-row items-center w-full my-3">
               <div class="text-red-500">
                 {% render 'icon-failed' %}
               </div>
               <div class="text-sm font-medium ml-3">
-                
+                Your comment was not posted!
               </div>
-
             </div>
           </div>
         {% elsif form.posted_successfully? %}
