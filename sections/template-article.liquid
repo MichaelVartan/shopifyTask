@@ -34,7 +34,7 @@
         {% if article.image != blank %}
           <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
           {% else %}
-            
+            {% assign placeholder_image = value %}
         {% endif %}
       </div>
       {% when "article_content" %}
