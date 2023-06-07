@@ -13,7 +13,7 @@
           "settings": {
           }
         },
-        "date": {
+        "published_date": {
           "type": "article_published_date",
           "settings": {
           }
@@ -21,8 +21,7 @@
       },
       "block_order": [
         "title",
-        "author",
-        "date"
+        "author"
       ],
       "settings": {
       }
