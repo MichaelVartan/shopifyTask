@@ -985,6 +985,10 @@ video {
   outline-offset: 2px;
 }
 
+.focus\:outline:focus {
+  outline-style: solid;
+}
+
 @media (min-width: 640px) {
   .sm\:gap-8 {
     gap: 2rem;
