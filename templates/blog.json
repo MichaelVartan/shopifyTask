@@ -3,6 +3,10 @@
     "template": {
       "type": "template-blog",
       "settings": {
+        "number_of_blog_posts": 1,
+        "show_description": true,
+        "number_of_words": 15,
+        "blog_read_more": "Read more"
       }
     }
   },
