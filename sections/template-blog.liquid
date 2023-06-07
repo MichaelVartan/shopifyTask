@@ -4,7 +4,7 @@
       {% if article.image != blank %}
         <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}">
       {% else %}
-        {{ 'image' | placeholder_svg_tag }}
+        {{ 'image' | placeholder_svg_tag: 'w-20' }}
       {% endif %}
     </div>
 
