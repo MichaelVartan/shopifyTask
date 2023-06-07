@@ -22,12 +22,14 @@
         </div>
       </div>
       {% when "article_published_date" %}
-        <div class="flex items-center justify-center">
-            div.
+      <div class="flex items-center justify-center">
+        <div class="max-w-7xl text-center">
+          {% if section.settings.enable_published_date %}
+            <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
+          {% endif %}
         </div>
-      {% if section.settings.enable_published_date %}
-        <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
-      {% endif %}
+      </div>
+
       {% when "featured_image" %}
       <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
       {% when "article_content" %}
