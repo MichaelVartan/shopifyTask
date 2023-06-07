@@ -33,8 +33,8 @@
       <div class="max-w-7xl bg-blue-100 rounded-lg mx-2 md:mx-auto overflow-hidden">
         {% if article.image != blank %}
           <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
-          {% else %}
-            {% assign placeholder_image = value %}
+        {% else %}
+          {% assign placeholder_image = 'lifestyle-2' %}
         {% endif %}
       </div>
       {% when "article_content" %}
