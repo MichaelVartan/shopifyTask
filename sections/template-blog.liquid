@@ -11,9 +11,11 @@
               {% else %}
                 {{ 'image' | placeholder_svg_tag: 'w-20' }}
               {% endif %}
+
               <h1>{{ article.title }}</h1>
 
               {% if article.excerpt.size > 0 %}
+                <p></p>
                 {% else %}
                   {% if section.settings.show_description %}
                     <p>{{ article.content | strip_html | truncatewords: section.settings.number_of_words }}</p>
