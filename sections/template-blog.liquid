@@ -5,7 +5,9 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {% for article in blog.articles %}
           <div class="w-full py-6 px-3">
-            div.bg-white.shadow-xl.rounded-lg.overflow-hidden
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                
+            </div>
                 {% if article.image != blank %}
                 <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}">
                 {% else %}
