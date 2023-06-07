@@ -180,7 +180,7 @@
         "dateCreated": {{ article.created_at | date: format: "default" | json }},
         "author":{
             "@type": "Peson",
-            "name"
+            "name": {{ article.author | json }}
         }
     }
 </script>
