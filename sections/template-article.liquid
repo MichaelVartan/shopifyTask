@@ -66,8 +66,8 @@
             </div>
           {% endfor %}
           {% if paginate.pages > 1 %}
-          {{paginate }}
-            
+            {{ paginate | default_pagination }}
+
           {% endif %}
         {% endpaginate %}
       </div>
