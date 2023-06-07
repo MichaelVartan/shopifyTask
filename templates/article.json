@@ -12,10 +12,17 @@
           "type": "article_author",
           "settings": {
           }
+        },
+        "date": {
+          "type": "article_published_date",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "title"
+        "title",
+        "author",
+        "date"
       ],
       "settings": {
       }
