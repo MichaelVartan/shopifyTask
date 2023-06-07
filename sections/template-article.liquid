@@ -172,7 +172,9 @@
             "description": {{ article.excerpt | strip_html | json }}   
         {% endif %},
         {% if article.image %}
-            
+            "image":[
+                {{  }}
+            ]
             
         {% endif %}
     }
