@@ -9,7 +9,8 @@
       <h1>{{ article.title }}</h1>
 
       {% if article.excerpt.size > 0  %}
-        
+        {% else %}
+            <p></p>
       {% endif %}
     </div>
 
