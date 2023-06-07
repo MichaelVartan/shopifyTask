@@ -168,7 +168,9 @@
         "@type": "blogPosting",
         "headline":{{ article.title | json}},
         "articleBody":{{ article.content | strip_html | json}},
-        
+        {% if condition %}
+            
+        {% endif %}
     }
 </script>
 
