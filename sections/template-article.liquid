@@ -90,7 +90,7 @@
               </div>
             </div>
             <ul class="px-4 mb-3 ml-7 list-decimal">
-              {% for error in form %}
+              {% for error in form.errors %}
                 <li>
                   <span>
                     {{ form.errors.messages[error] }}
