@@ -167,7 +167,7 @@
   {
   "@context": "http://schema.org",
   "@type": "blogPosting",
-    "headline":{{ article.title | json }},
+"headline":{{ article.title | json }},
   "articleBody":{{ article.content | strip_html | json }},
   {% if article.excerpt != blank %}
     "description": {{ article.excerpt | strip_html | json }},
