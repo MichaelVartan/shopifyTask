@@ -2,7 +2,7 @@
   {% for article in blog.articles %}
     <div>
         {% if article.image != blank %}
-            <img src="{{ article.image | img }}" alt="">
+            <img src="{{ article.image | img_url: 'medium' }}" alt="">
             
         {% endif %}
     </div>
