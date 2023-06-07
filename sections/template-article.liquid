@@ -167,7 +167,8 @@
         "@context": "http://schema.org",
         "@type": "blogPosting",
         "headline":{{ article.title | json}},
-        "articleBody":{{ article.content | strip_html}},
+        "articleBody":{{ article.content | strip_html | json}},
+        
     }
 </script>
 
