@@ -3,8 +3,8 @@
     <div>
       {% if article.image != blank %}
         <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}">
-    {% else %}
-    {{ '' }}
+      {% else %}
+        {{ 'image | placeholder_svg_tag' }}
       {% endif %}
     </div>
 
