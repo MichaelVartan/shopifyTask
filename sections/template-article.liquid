@@ -173,7 +173,7 @@
         {% endif %},
         {% if article.image %}
             "image":[
-                {{ article.image | img_url: 'medium' | prepend: 'htt' }}
+                {{ article.image | img_url: 'medium' | prepend: 'https:' }}
             ]
             
         {% endif %}
