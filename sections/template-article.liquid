@@ -166,7 +166,7 @@
 
 {
     "@context": "http://schema.org",
-    "@type": "blogPosting",
+    "@type": "BlogPosting",
     "headline": {{ article.title | json }},
     "articleBody":{{ article.content | strip_html | json }},
     {% if article.excerpt != blank %}
