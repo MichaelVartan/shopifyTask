@@ -16,7 +16,7 @@
       </div>
       {% when "article_author" %}
       <div class="flex items-center justify-center">
-        <div class="max-w-7xl text-center" itemscope itemtype="">
+        <div class="max-w-7xl text-center" itemscope itemtype="http://schema.org/Person">
           {% if section.settings.enable_author %}
             <small >
               {{ article.author }}
