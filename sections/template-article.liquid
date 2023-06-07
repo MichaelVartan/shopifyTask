@@ -65,7 +65,8 @@
               <p class="text-sm">{{ aComment.content }}</p>
             </div>
           {% endfor %}
-          {% if pagi %}
+          {% if paginate.pages > 1 %}
+          {{paginate }}
             
           {% endif %}
         {% endpaginate %}
