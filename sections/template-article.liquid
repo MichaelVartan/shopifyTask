@@ -166,8 +166,8 @@
 
   {
   "@context": "http://schema.org",
-    "@type": "blogPosting",
-    "headline":{ {{ article.title | json }}},
+      "@type": "blogPosting",
+      "headline": {{ article.title | json }},
   "articleBody":{{ article.content | strip_html | json }},
   {% if article.excerpt != blank %}
     "description": {{ article.excerpt | strip_html | json }},
@@ -180,14 +180,14 @@
   "datePublished": {{ article.published_at | date: format: "default" | json }},
   "dateCreated": {{ article.created_at | date: format: "default" | json }},
   "author":{
-          "@type": "Person",
-          "name": {{ article.author | json }},
+            "@type": "Person",
+            "name": {{ article.author | json }},
   },
-      "publisher":{
-          "@type": "Organization",
-          "name": {{ shop.name | json }},
+        "publisher":{
+            "@type": "Organization",
+            "name": {{ shop.name | json }},
   }
-      }</script>
+        }</script>
 
 
 {% schema %}
