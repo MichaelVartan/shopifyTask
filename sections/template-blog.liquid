@@ -3,7 +3,8 @@
     <div>
       {% if article.image != blank %}
         <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}">
-
+    {% else %}
+    {{ '' }}
       {% endif %}
     </div>
 
