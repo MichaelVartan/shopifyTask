@@ -6,7 +6,9 @@
     {{ article.author }}
   </small>
 {% endif %}
-
+{% if condition %}
+    
+{% endif %}
 
 <time datetime="{{ article.published_at | date: '%d-%m-%y'  }}">{{ article.published_at | date: '%d-%m-%y' }}</time>
 <img src="{{ article.image | img_url: 'large' }}" alt=" {{ article.image.alt }} ">
