@@ -684,6 +684,10 @@ video {
   max-width: 48rem;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .origin-top-left {
   transform-origin: top left;
 }
