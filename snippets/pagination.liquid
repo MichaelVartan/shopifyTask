@@ -1,9 +1,11 @@
 {% if pagination.pages > 0 %}
   <nav role="navigation" class="flex justify-center my-8">
     {% if pagination.previous %}
-        
+      <a href="{{ pagination.previous.url }}">{{ pagination.previous.title }}</a>
     {% endif %}
-    <a href="{{ pagination.previous.url }}">{{ pagination.previous.title }}</a>
+    {% if pagination.next %}
+      <a href="{{ pagination.previous.url }}">{{ pagination.previous.title }}</a>
+    {% endif %}
     <a href="{{ pagination.next.url }}">{{ pagination.next.title }}</a>
 
   </nav>
