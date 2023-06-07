@@ -22,12 +22,18 @@
           "type": "featured_image",
           "settings": {
           }
+        },
+        "content": {
+          "type": "article_content",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "title",
         "author",
-        "published_date"
+        "published_date",
+        "content"
       ],
       "settings": {
       }
