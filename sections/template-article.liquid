@@ -180,11 +180,11 @@
   "datePublished": {{ article.published_at | date: format: "default" | json }},
   "dateCreated": {{ article.created_at | date: format: "default" | json }},
   "author":{
-   "@type": "Person",
-    "name": {{ article.author | json }},
+        "@type": "Person",
+        "name": {{ article.author | json }},
   },
     "publisher":{
-                "@type": "Organization",
+            "@type": "Organization",
                 "name": {{ shop.name | json }},
   }
     }</script>
