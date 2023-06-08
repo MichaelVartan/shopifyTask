@@ -7,7 +7,7 @@
     {% endif %}
     <span>{{ product.vendor }}</span>
     <a href="{{ product.url }}">{{ product.title }}</a>
-    <p>{{ product.pr }}</p>
+    <p>{{ product.price | money }}</p>
   {% else %}
     <p>There are no products inside this collection</p>
   {% endfor %}
