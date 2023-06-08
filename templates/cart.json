@@ -21,7 +21,8 @@
       },
       "block_order": [
         "subtotal",
-        "update-button"
+        "update-button",
+        "checkout-button"
       ],
       "settings": {
       }
