@@ -7,7 +7,7 @@
           <div class="border bg-white shadow-lg rounded-lg overflow-hidden">
             <a href="{{ product.url }}">
               {% if product.featured_image %}
-              div
+              div.h-80.overflow-hidde
                 <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.featured_image.alt }}">
 
               {% endif %}
