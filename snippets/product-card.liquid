@@ -13,14 +13,14 @@
         {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100' }}
       {% endif %}
     </a>
-    <div class="flex">
-      <div class="flex-col p-4">
-        <span class="text-sm text-gray-400">{{ product_product.vendor }}</span>
 
-        <a href="{{ product_product.url }}" class="text-gray-700 uppercase font-medium">{{ product_product.title }}</a>
+    <div class="grid grid-cols-1  p-4">
+      <span class="text-sm text-gray-400">{{ product_product.vendor }}</span>
 
-        <p class="text-gray-500">{{ product_product.price | money }}</p>
-      </div>
+      <a href="{{ product_product.url }}" class="text-gray-700 uppercase font-medium">{{ product_product.title }}</a>
+
+      <p class="text-gray-500">{{ product_product.price | money }}</p>
     </div>
+
   </div>
 </div>
