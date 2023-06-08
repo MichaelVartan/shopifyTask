@@ -1,4 +1,5 @@
-{% for product in section.settings.featured_collection.products %}{% endfor %}
+{% for product in section.settings.featured_collection.products %}
+re{% endfor %}
 
 {% schema %}
   {
@@ -9,7 +10,12 @@
         "id": "title",
         "default": "Featured Collection",
         "label": "Title"
+      }, {
+        "type": "collection",
+        "id": "featured_collection",
+        "label": "Collection"
       }
+
     ]
   }
 {% endschema %}
