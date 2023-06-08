@@ -7,9 +7,9 @@
         {% render 'product-card', product_product: product %}
 
         {% else %}
-            {% if condition %}
+            {% for item in collection %}
                 
-            {% endif %}
+            {% endfor %}
       {% endfor %}
     </div>
   </div>
