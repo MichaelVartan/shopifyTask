@@ -3,7 +3,7 @@
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-col-1 md:grid-col-3 gap-4">
       {% for product in collection.products %}
-
+        div.w-full
         {% if product.featured_image %}
           <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.featured_image.alt }}">
 
