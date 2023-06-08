@@ -1,15 +1,16 @@
 <div class="px-4 py-8">
-  <h1 class="3-xl text-center">{{ collection.title }}</h1>
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-col-1 md:grid-col-3 gap-4">
-      {% for product in collection.products %}
-        {% render 'product-card', _product: product %}
-      {% else %}
-        <p>There are no products inside this collection</p>
-      {% endfor %}
+  {% paginate collection.products by 4 %}
+
+    <h1 class="3-xl text-center">{{ collection.title }}</h1>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-col-1 md:grid-col-3 gap-4">
+        {% for product in collection.products %}
+          {% render 'product-card', _product: product %}
+        {% else %}
+          <p>There are no products inside this collection</p>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-  {% paginate collection.products by <section></section> %}
 
     {% render 'pagination', pagination: paginate %}
   {% endpaginate %}
@@ -17,15 +18,15 @@
 
 
 {% schema %}
-    {
-        "name":"Template Collection",
-        "settings": [
-            {
-                "type": "number",
-                "id":"products_per_page",
-                "default": 4,
-                "label": "Number of products per page"
-            }
-        ]
-    }
+  {
+    "name": "Template Collection",
+    "settings": [
+      {
+        "type": "number",
+        "id": "products_per_page",
+        "default": 4,
+        "label": "Number of products per page"
+      }
+    ]
+  }
 {% endschema %}
