@@ -9,7 +9,7 @@
       {% endfor %}
     </div>
   </div>
-  {% paginate collection.products by 4 %}
+  {% paginate collection.products by <section></section> %}
 
     {% render 'pagination', pagination: paginate %}
   {% endpaginate %}
@@ -19,8 +19,13 @@
 {% schema %}
     {
         "name":"Template Collection",
-        "blocks": [
-            
+        "settings": [
+            {
+                "type": "number",
+                "id":"products_per_page",
+                "default": 4,
+                "label": "Number of products per page"
+            }
         ]
     }
 {% endschema %}
