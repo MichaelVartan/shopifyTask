@@ -69,20 +69,23 @@
             </div>
           </div>
           <div class="w-full my-4 md:w-80">
-            <h3 class="text-xl">Subtotal: {{ cart.total_price | money }}</h3>
-            <div class="my-2">
-              <button
-                name="update"
-                type="submit"
-                class="w-full p-3 border border-gray-600 text-gray-600 font-medium hover:bg-gray-600 hover:text-white">Update</button>
+                {% for item in collection %}
+                    
+                {% endfor %}
+                <h3 class="text-xl">Subtotal: {{ cart.total_price | money }}</h3>
+                <div class="my-2">
+                <button
+                    name="update"
+                    type="submit"
+                    class="w-full p-3 border border-gray-600 text-gray-600 font-medium hover:bg-gray-600 hover:text-white">Update</button>
 
-            </div>
-            <div class="my-2">
-              <button
-                name="checkout"
-                type="submit"
-                class="w-full p-3 border border-gray-600 text-gray-600 font-medium hover:bg-gray-600 hover:text-white">Checkout</button>
-            </div>
+                </div>
+                <div class="my-2">
+                <button
+                    name="checkout"
+                    type="submit"
+                    class="w-full p-3 border border-gray-600 text-gray-600 font-medium hover:bg-gray-600 hover:text-white">Checkout</button>
+                </div>
           </div>
         </div>
       </form>
