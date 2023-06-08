@@ -36,8 +36,8 @@
                                 <span class="text-sm text-gray-500 my-1">{{ item.variant.title }}</span>
                                 <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0 " class="text-sm font-medium text-red-500 my-1">remove</a>
                             </td>
-                            <td>
-                                <input type="input" name="updates[]" value="{{ item.quantity }}" min="1" id="updates-{{forloop.index}}" class="w-20 border p-2">
+                            <td class="">
+                                <input type="input" name="updates[]" value="{{ item.quantity }}" min="1" id="updates_{{ forloop.index }}" class="w-20 border p-2">
                             </td>
                             <td></td>
                         </tr>
