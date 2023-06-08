@@ -17,9 +17,9 @@
     <div class="flex flex-col p-4">
       <span class="text-sm ">{{ _product.vendor }}</span>
 
-      <a href="{{ product.url }}" class="text-gray-700 font-medium">{{ product.title }}</a>
+      <a href="{{ _product.url }}" class="text-gray-700 font-medium">{{ _product.title }}</a>
 
-      <p class="text-gray-500">{{ product.price | money }}</p>
+      <p class="text-gray-500">{{ _product.price | money }}</p>
     </div>
 
   </div>
