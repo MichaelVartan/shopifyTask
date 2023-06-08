@@ -1,17 +1,19 @@
 {% for collection in collections %}
-    {% if collection.all_products_count > 0 %}
-        <div class="w-full py-6 px-3">
-            <div class="border bg-white overflow-hidden">
-                <a href="{{ collection.url }}">
-                    <div class="h-full overflow-hidden">
-                        {% if collection.featured_image != blank %}
-                            {% assign collection_image = value %}
-                        {% endif %}
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-    {% endif %}
-    
+  {% if collection.all_products_count > 0 %}
+    <div class="w-full py-6 px-3">
+      <div class="border bg-white overflow-hidden">
+        <a href="{{ collection.url }}">
+          <div class="h-full overflow-hidden">
+            {% if collection.featured_image != blank %}
+              {% assign collection_image = collection.featured_image %}
+              {% else %}
+                {% assign variable = value %}
+            {% endif %}
+          </div>
+        </a>
+      </div>
+    </div>
+
+  {% endif %}
+
 {% endfor %}
