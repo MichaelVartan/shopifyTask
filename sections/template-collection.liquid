@@ -1,6 +1,6 @@
 {% paginate collection.products by 4 %}
-    {% for product in collection.products %}
+  {% for product in collection.products %}
     {% else %}
-    <p>There</p>       
-    {% endfor %}
+      <p>There are no products inside this collection</p>
+  {% endfor %}
 {% endpaginate %}
