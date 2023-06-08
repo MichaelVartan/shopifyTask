@@ -6,8 +6,8 @@
           <div class="h-full overflow-hidden">
             {% if collection.featured_image != blank %}
               {% assign collection_image = collection.featured_image %}
-              {% else %}
-                {% assign collection_image = collection.produc %}
+            {% else %}
+              {% assign collection_image = collection.products.first.image %}
             {% endif %}
           </div>
         </a>
