@@ -1,18 +1,19 @@
 {% if cart.item_count > 0 %}
-<div class="p-2"></div>
-    <div class="max-w-6xl">
-        <flex class="flex-col my-10">
-            <mx-auto>
-                <div class="flex items-end justify-between my-5">
-                    <h1 class="text-3xl">Your Cart</h1>
-                    <a href="{{ routes.all_products_collection_url  }}" class="text-blue-600 hover:text-blue-800 font-medium uderline">Continue shopping</a>
-                </div>
-            </mx-auto>
-        </flex>
+    <div class="p-2"></div>
+        <div class="max-w-6xl">
+            <flex class="flex-col my-10">
+                <mx-auto>
+                    <div class="flex items-end justify-between my-5">
+                        <h1 class="text-3xl">Your Cart</h1>
+                        <a href="{{ routes.all_products_collection_url  }}" class="text-blue-600 hover:text-blue-800 font-medium uderline">Continue shopping</a>
+                    </div>
+                </mx-auto>
+            </flex>
+        </div>
     </div>
-</div>
+    
 
-  {% else %}
+{% else %}
     <div class="max-w-6xl h-60 my-4 mx-auto flex items-center justify-center">
       <div class="text-center">
         <h1 class="text-3xl my-4">Your cart is empty</h1>
