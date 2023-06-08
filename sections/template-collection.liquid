@@ -1,19 +1,21 @@
-<div class="px-4 py-8"></div>
-{% paginate collection.products by 4 %}
-  {% for product in collection.products %}
+<div class="px-4 py-8">
+    h1.3-xl
+  {% paginate collection.products by 4 %}
+    {% for product in collection.products %}
 
-    {% if product.featured_image %}
-      <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.featured_image.alt }}">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.featured_image.alt }}">
 
-    {% endif %}
+      {% endif %}
 
-    <span>{{ product.vendor }}</span>
+      <span>{{ product.vendor }}</span>
 
-    <a href="{{ product.url }}">{{ product.title }}</a>
+      <a href="{{ product.url }}">{{ product.title }}</a>
 
-    <p>{{ product.price | money }}</p>
-  {% else %}
-    <p>There are no products inside this collection</p>
-  {% endfor %}
-  {% render 'pagination', pagination: paginate %}
-{% endpaginate %}
+      <p>{{ product.price | money }}</p>
+    {% else %}
+      <p>There are no products inside this collection</p>
+    {% endfor %}
+    {% render 'pagination', pagination: paginate %}
+  {% endpaginate %}
+</div>
