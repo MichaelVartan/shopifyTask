@@ -1,5 +1,6 @@
 {% paginate collection.products by 4 %}
     {% for product in collection.products %}
-        
+    {% else %}
+    {}       
     {% endfor %}
 {% endpaginate %}
