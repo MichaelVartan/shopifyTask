@@ -25,7 +25,7 @@
                             <td>
                                 <a href="{{ item.url }}">
                                     {% if item.image %}
-                                        <img class="h-20 w-20 object-cover border" src="{{ item.image }}" alt="">
+                                        <img class="h-20 w-20 object-cover border" src="{{ item.image | img_url: sma }}" alt="">
                                     {% else %}
                                         {{ 'product-1'| placeholder_svg_tag: 'w-20 h-20 object-cover border' }}
                                     {% endif %}
