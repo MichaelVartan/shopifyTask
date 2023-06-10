@@ -1,9 +1,12 @@
 {
-	"name": "Homepage",
+	"name": "Template Index",
 	"sections": {
-		"main": {
-			"type": "index"
+		"featured-collection": {
+			"type": "featured-collection",
+			"settings": {
+				"featured_collection": "all"
+			}
 		}
 	},
-	"order": ["main"]
+	"order": ["featured-collection"]
 }
