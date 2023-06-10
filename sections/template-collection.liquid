@@ -4,7 +4,7 @@
 
     <h1 class="3-xl text-center">{{ collection.title }}</h1>
     <div class="max-w-6xl mx-auto my-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {% for product in collection.products %}
           {% render 'product-card', product_product: product %}
         {% else %}
