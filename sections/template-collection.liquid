@@ -3,7 +3,7 @@
   {% paginate collection.products by section.settings.products_per_page %}
 
     <h1 class="3-xl text-center">{{ collection.title }}</h1>
-    <div class="max-w-6xl mx-auto my-10">
+    <div class="max-w-6xl mx-auto my-11">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {% for product in collection.products %}
           {% render 'product-card', product_product: product %}
