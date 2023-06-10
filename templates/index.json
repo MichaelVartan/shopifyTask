@@ -4,7 +4,9 @@
 		"featured-collection": {
 			"type": "featured-collection",
 			"settings": {
-				"featured_collection": "all"
+				"title": "Featured Collection",
+				"featured_collection": "all",
+				"number_of_products_to_show": 3
 			}
 		}
 	},
