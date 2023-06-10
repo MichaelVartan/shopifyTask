@@ -5,5 +5,5 @@
 			"type": "template-collection"
 		}
 	},
-	"order": ["main"]
+	"order": ["template"]
 }
