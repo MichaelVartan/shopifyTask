@@ -1,1 +1,10 @@
-hellow world
+{% case media.media_type %}
+  {% when 'image' %}
+  <img
+    class="w-full h-full object-cover"
+    src="{{ media | img_url: 'large' }}"
+    alt="{{ media.preview_image.alt }}">
+  {% when 'external_video' %}
+  {{ media | external_video_tag: class: 'w-full h-80 object-cover' }}{% else %}
+
+{% endcase %}
