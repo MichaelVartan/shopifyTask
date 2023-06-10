@@ -1,12 +1,9 @@
 {
-  "sections": {
-    "template": {
-      "type": "template-product",
-      "settings": {
-      }
-    }
-  },
-  "order": [
-    "template"
-  ]
+	"sections": {
+		"template": {
+			"type": "template-product",
+			"settings": {}
+		}
+	},
+	"order": ["template"]
 }

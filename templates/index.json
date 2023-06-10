@@ -1,15 +1,13 @@
 {
-  "sections": {
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 3
-      }
-    }
-  },
-  "order": [
-    "featured-collection"
-  ]
+	"sections": {
+		"featured-collection": {
+			"type": "featured-collection",
+			"settings": {
+				"title": "Featured Collection",
+				"featured_collection": "all",
+				"number_of_products_to_show": 3
+			}
+		}
+	},
+	"order": ["featured-collection"]
 }
