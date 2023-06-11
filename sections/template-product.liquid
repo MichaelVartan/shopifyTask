@@ -100,6 +100,8 @@
 
                       </select>
                     </div>
+                    <script type="application/json">
+                      {{ product.variants | json }}</script>
                   {% endfor %}
                 </variant-selector>
 
@@ -159,11 +161,32 @@
 
     onVariantChange() {
       this.getSelectedOptions();
+      this.getSelectedVariant();
     }
 
     getSelectedOptions() {
       this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
       console.log(this.options)
+    }
+
+    getVariantJSON() {
+      this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+      return this.variantData
+    }
+
+    getSelectedVariant() {
+      this.currentVariant = this.getVariantJSON().find((variant) => {
+        const findings = !variant.options.map((option, index) => {
+          return this.options[index] === option;
+        }).includes(false);
+
+        if (findings) 
+          return variant;
+        
+
+      });
+
+      console.log(this.currentVariant)
     }
   }
 
