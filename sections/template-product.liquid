@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-{% assign = product.selected_or_first_available_variant %}
+{% assign selected_variant = product.selected_or_first_available_variant %}
 
 <style>
   .swiper-button-prev,
@@ -56,10 +56,10 @@
     </div>
     <div class="product--information">
       {% form 'product', product %}
-        {% comment %} <input
-        type="hidden"
-        name="id"
-        value="{{ product.selected_or_first_available_variant.id }}"> {% endcomment %}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ selected_variant.id }}">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'vendor' %}
