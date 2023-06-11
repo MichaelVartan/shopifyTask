@@ -1,26 +1,58 @@
 {
-	"sections": {
-		"template": {
-			"type": "template-product",
-			"blocks": {
-				"vendor": { "type": "vendor" },
-				"title": { "type": "title" },
-				"price": { "type": "price" },
-				"variant_selector": { "type": "variant_selector" },
-				"quantity": { "type": "quantity" },
-				"description": { "type": "description" },
-				"checkout_buttons": { "type": "checkout_buttons" }
-			},
-			"block_order": [
-				"vendor",
-				"title",
-				"price",
-				"variant_selector",
-				"quantity",
-				"description",
-				"checkout_buttons"
-			]
-		}
-	},
-	"order": ["template"]
+  "sections": {
+    "template": {
+      "type": "template-product",
+      "blocks": {
+        "b59134cf-b74b-4275-bcbe-1c5fbb30a53b": {
+          "type": "vendor",
+          "settings": {
+          }
+        },
+        "7fb0ace9-1fde-49b0-9a89-7914ed921cd0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "a1eb28bf-4999-43e4-8d5d-54161c08bae8": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "bb41693b-aa96-45da-9b6a-811b0b5e471b": {
+          "type": "variant_selector",
+          "settings": {
+          }
+        },
+        "650302db-ba4f-4588-b37c-af6522ae5b4e": {
+          "type": "quantity",
+          "settings": {
+          }
+        },
+        "2695b7d6-6e53-4e88-8f95-3dd512d484f8": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "deefb218-b185-447d-8d4f-530362b9bdfc": {
+          "type": "checkout_buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "b59134cf-b74b-4275-bcbe-1c5fbb30a53b",
+        "7fb0ace9-1fde-49b0-9a89-7914ed921cd0",
+        "a1eb28bf-4999-43e4-8d5d-54161c08bae8",
+        "bb41693b-aa96-45da-9b6a-811b0b5e471b",
+        "650302db-ba4f-4588-b37c-af6522ae5b4e",
+        "2695b7d6-6e53-4e88-8f95-3dd512d484f8",
+        "deefb218-b185-447d-8d4f-530362b9bdfc"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
 }
