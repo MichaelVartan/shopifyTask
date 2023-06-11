@@ -83,7 +83,7 @@
                     name="options[{{ option.name | escape }}]"
                     id="Option-{{ section.id }}-{{ forloop.index0 }}"
                     class="w-full">
-                    {% for value in option.value %}
+                    {% for value in option.values %}
                       <option value="{{ value | escape }}">
                         {{ value }}</option>
                     {% endfor %}
