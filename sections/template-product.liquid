@@ -59,7 +59,7 @@
         <input
           type="hidden"
           name="id"
-          value="{{ selected_variant.id }}">
+          value="{{ product.selected_or_first_available_variant.id }}">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'vendor' %}
