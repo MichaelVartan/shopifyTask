@@ -56,10 +56,10 @@
     </div>
     <div class="product--information">
       {% form 'product', product %}
-        <input
-          type="hidden"
-          name="id"
-          value="{{ product.selected_or_first_available_variant.id }}">
+        {% comment %} <input
+        type="hidden"
+        name="id"
+        value="{{ product.selected_or_first_available_variant.id }}"> {% endcomment %}
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'vendor' %}
