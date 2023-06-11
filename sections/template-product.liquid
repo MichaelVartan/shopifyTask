@@ -162,7 +162,7 @@
     }
 
     getSelectedOptions() {
-      this.options = Array(this.querySelectorAll('select'), (select) => select.value);
+      this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
       console.log(this.options)
     }
   }
