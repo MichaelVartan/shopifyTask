@@ -551,6 +551,10 @@ video {
   right: 0px;
 }
 
+.top-auto {
+  top: auto;
+}
+
 .z-10 {
   z-index: 10;
 }
