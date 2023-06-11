@@ -54,6 +54,10 @@
     </div>
     <div class="product--information">
       {% form 'product', product %}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant }}">
         <div class="my-3">
           <span class="text-xs text-gray-500">{{ product.vendor }}</span>
         </div>
@@ -119,10 +123,10 @@
             class="w-full py-4 px-6 bg-gray-900 text-white hover:bg-gray-700 rounded-sm my-2"
             {% if product.selected_or_first_available_variant == false %}disabled{% endif %}>
 
-            {% if product.selected_or_first_available_variant.available %}
-              Add To Cart
-            {% else %}
+            {% if product.selected_or_first_available_variant.available == false %}
               Sold Out
+            {% else %}
+              Add To Cart
             {% endif %}
 
           </button>
