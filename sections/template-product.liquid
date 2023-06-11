@@ -23,6 +23,10 @@
   .swiper-pagination-bullet-active {
     background: black !important;
   }
+
+  .product--information {
+    height: fit-content;
+  }
 </style>
 
 <div class="max-w-6xl mx-auto my-8">
@@ -54,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="product--information">
+    <div class="product--information sticky top-5 p-2">
       {% form 'product', product %}
         <input
           type="hidden"
