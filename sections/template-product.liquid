@@ -129,7 +129,7 @@
                 {% if selected_variant.available == false %}disabled{% endif %}>
 
                 {% if selected_variant.available == false %}
-                  Sold Out 
+                  Sold Out
                 {% else %}
                   Add To Cart
                 {% endif %}
@@ -138,7 +138,7 @@
             </div>
           {% endcase %}
 
-        {% endfor %}  
+        {% endfor %}
 
 
 
@@ -165,38 +165,38 @@
 
 {% schema %}
   {
-    "name": "Product",
+    "name": "Template Product",
     "blocks": [
       {
         "type": "vendor",
-        "name:": "Vendor",
+        "name": "Vendor",
         "limit": 1
       },
       {
         "type": "title",
-        "name:": "Title",
+        "name": "Title",
         "limit": 1
       },
       {
         "type": "price",
-        "name:": "Price",
+        "name": "Price",
         "limit": 1
       },
       {
         "type": "variant_selector",
-        "name:": "Variant Selector",
+        "name": "Variant Selector",
         "limit": 1
       }, {
         "type": "quantity",
-        "name:": "Quantity",
+        "name": "Quantity",
         "limit": 1
       }, {
         "type": "description",
-        "name:": "Description",
+        "name": "Description",
         "limit": 1
       }, {
         "type": "checkout_buttons",
-        "name:": "Checkout Buttons",
+        "name": "Checkout Buttons",
         "limit": 1
       }
 
