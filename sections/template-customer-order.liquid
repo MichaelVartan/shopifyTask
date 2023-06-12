@@ -15,7 +15,7 @@
   </div>
   <div>
     {% for line-item in order.line_items %}
-      {{ "Hello" }}
+      {{ line_item.product.title }}
 
     {% endfor %}
   </div>
