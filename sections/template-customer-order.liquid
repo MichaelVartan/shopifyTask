@@ -17,6 +17,7 @@
     {% for line_item in order.line_items %}
       <div class="w-full border border-gray-200 divide-y rounded-sm mb-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 p-4 md:p-12">
+
           <div class="w-full h-80 min-h-80 bg-gray-200 rounded-md overflow-hidden border">
             {% if line_item.image %}
               <img
@@ -28,6 +29,7 @@
 
             {% endif %}
           </div>
+
           <div>
             <h1 class="text-xl font-medium mb-4">
               {{ line_item.title | link_to: line_item.product.product.url }}
@@ -69,6 +71,20 @@
           </div>
 
         </div>
+
+        <div class="p-4 md:p-12">
+          <h1 class="text-lg font-medium mb-4">Fulfillment</h1>
+          {% if line_item.successfully_fulfilled_quantity > 0 %}
+
+            <p class="mb-2">We have fulfilled: {{ line_item.successfully_fulfilled_quantity }} items of your recent order</p>
+            <p class="mb-2">Tracking company: {{ line_item.fulfillment.tracking_company }}</p>
+            <p class="mb-2">Tracking number: {{ line_item.fulfillment.tracking_number }}</p>
+          {% else %}
+            <p class="text-gray-500">This item is not yet fulfilled</p>
+
+          {% endif %}
+        </div>
+
       </div>
 
     {% endfor %}
