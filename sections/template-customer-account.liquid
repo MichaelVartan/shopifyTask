@@ -46,7 +46,7 @@
 
           </div>
 
-          <div class="max-w-6xl mx-auto">
+          <div class="max-w-6xl mx-auto my-10">
             {% render 'pagination', pagination: paginate %}
           </div>
 
@@ -65,6 +65,8 @@
       <h2 class="text-xl font-bold text-gray-700 mb-12">Account details</h2>
 
       {{ customer.default_address | format_address }}
+
+      <a href=" {{ routes.account_addresses_url }}" class="text-sm text-blue-600 hover:blue-900 underline ">View addresses</a>
     </div>
   </div>
 </div>
