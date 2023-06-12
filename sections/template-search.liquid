@@ -18,15 +18,21 @@
     </div>
     {% if search.performed %}
       {% if search.results.size > 0 %}
-        {% for item in search.results %}
-          {% case item.object_type %}
-            {% when 'product' %}
-            {% render 'product-card', product_product: item %}
-        {% else %}
-          {% endcase %}
-        {% endfor %}
+        <div class="max-w-6xl mx-auto">
+          <p class="text-gray-500 text-center my-10">{{ search.results.size }} Results for the search term: {{ search.terms | escape }}</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for item in search.results %}
+              {% case item.object_type %}
+                {% when 'product' %}
+                {% render 'product-card', product_product: item %}
+            {% else %}
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+
       {% else %}
-        <div class="text-center my-4">No results found for the search term: {{ search.terms }}, try to use a different key word</div>
+        <div class="text-center my-4">No results found for the search term: {{ search.terms | escape }}, try to use a different key word</div>
       {% endif %}
 
     {% endif %}
