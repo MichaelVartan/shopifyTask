@@ -79,6 +79,14 @@
             <p class="mb-2">We have fulfilled: {{ line_item.successfully_fulfilled_quantity }} items of your recent order</p>
             <p class="mb-2">Tracking company: {{ line_item.fulfillment.tracking_company }}</p>
             <p class="mb-2">Tracking number: {{ line_item.fulfillment.tracking_number }}</p>
+
+            <a
+              target="_blank"
+              href="{{ line_item.fulfillment.tracking_url }}"
+              class="flex w-max text-sm text-white font-medium bg-gray-700 hover:bg-gray-900 px-4 py-1 rounded">
+              Track order
+              <span class="ml-1">{% render 'icon-link' %}</span>
+            </a>
           {% else %}
             <p class="text-gray-500">This item is not yet fulfilled</p>
 
@@ -88,6 +96,27 @@
       </div>
 
     {% endfor %}
+  </div>
+
+  <div class="w-full grid sm:grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-4 lg:gap-12 border border-gray-200 rounded-sm p-4 md:p-12 my-6 bg-gray-50">
+    <div>
+      <h1 class="font-medium mb-4">Billing address</h1>
+      {{ order.billing_address | format_address }}
+    </div>
+    <div>
+      <h1 class="font-medium mb-4">Payment information</h1>
+      {% for transaction in order.transactions %}
+        <div class="mb-4">
+          {% assign credit_card_company = transaction.payment_details.credit_card_company %}
+
+          {% if credit_card_company %}
+            <p>{{ credit_card_company }}</p>
+          {% endif %}
+        </div>
+
+      {% endfor %}
+    </div>
+    <div></div>
   </div>
 
 
