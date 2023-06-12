@@ -19,6 +19,11 @@
                       src="{{ order.line_items.first.image  |img_url: 'medium'}}"
                       alt="{{ order.line_items.first.image.alt }}"
                       class="w-full h-full object-center object-cover">
+
+                  {% else %}
+
+                    {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-center object-cover' }}
+
                   {% endif %}
                 </div>
               </div>
