@@ -9,13 +9,16 @@
           Order History
         </h2>
 
-        <div>
+        <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {% paginate customer.orders by 8 %}
             {% for order in customer.orders %}
               <div class="relative">
                 <div class="w-full min-h-80 bg-gray-200 rounded-md overflow-hidden lg:h-80">
                   {% if order.line_items.first.image %}
-                    <img src="{{ order.line_items.first.image  |img_url: 'medium'}}" alt="{{ order.line_items.first.image.alt }}">
+                    <img
+                      src="{{ order.line_items.first.image  |img_url: 'medium'}}"
+                      alt="{{ order.line_items.first.image.alt }}"
+                      class="w-full h-full object-center object-cover">
                   {% endif %}
                 </div>
               </div>
