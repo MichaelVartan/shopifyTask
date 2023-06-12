@@ -13,6 +13,8 @@
     <a href="{{ routes.account_url }}" class="text-blue-700 hover:text-blue-900 underline font-medium">Back to account</a>
 
   </div>
+
+{% comment %}   
   <div>
     {% for line_item in order.line_items %}
       <div class="w-full border border-gray-200 divide-y rounded-sm mb-4">
@@ -96,7 +98,7 @@
       </div>
 
     {% endfor %}
-  </div>
+  </div> {% endcomment %}
 
   {% comment %} <div class="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 border border-gray-200 rounded-sm p-4 md:p-12 my-6 bg-gray-50">
     <div>
