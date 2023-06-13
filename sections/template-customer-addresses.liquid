@@ -223,7 +223,7 @@
       let option,
         selectedOption;
       for (let index = 0; index < index < select.options.length; index++) {
-        option = select.options[index];
+        option = select.option[index];
 
         if (option.value === select.getAttribute('value')) {
           selectedOption = option;
@@ -235,23 +235,5 @@
       return selectedOption;
     }
 
-
-    {% comment %} customerAddressesSelector() {
-      const addressesSelector = document.querySelectorAll("select[data-country-selector]");
-      if (addressesSelector.length < 1) 
-        return;
-      
-
-
-
-      addressesSelector.forEach((select) => {
-        select.addEventListener('change', function(e) {
-          let provinces = this.options[this.selectedIndex.dataset.provinces];
-          console.log(provinces);
-
-        });
-      });
-    }
-  } {% endcomment %}
   const customerAddress = new CustomerAddress();
 </script>
