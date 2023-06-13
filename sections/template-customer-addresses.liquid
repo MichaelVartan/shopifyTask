@@ -229,11 +229,12 @@
         selectedOption;
       for (let index = 0; index < index < select.options.length; index++) {
         option = select.options[index];
-      }
-      if (option.value === select.getAttribute('value')) {
-        selectedOption = option;
-        selectedOption.setAttribute('selected', 'selected');
-        break
+
+        if (option.value === select.getAttribute('value')) {
+          selectedOption = option;
+          selectedOption.setAttribute('selected', 'selected');
+          break
+        }
       }
       return selectedOption;
 
