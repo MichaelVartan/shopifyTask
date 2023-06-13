@@ -236,7 +236,7 @@
     }
 
 
-    customerAddressesSelector() {
+    {% comment %} customerAddressesSelector() {
       const addressesSelector = document.querySelectorAll("select[data-country-selector]");
       if (addressesSelector.length < 1) 
         return;
@@ -252,6 +252,6 @@
         });
       });
     }
-  }
+  } {% endcomment %}
   const customerAddress = new CustomerAddress();
 </script>
