@@ -85,7 +85,8 @@
             name="address[country]"
             id="address_country_{{ form.id }}"
             value="{{ form.country }}"
-            class="w-full text-gray-700 border py-3 px-4 focus:outline-none">
+            class="w-full text-gray-700 border py-3 px-4 focus:outline-none"
+            data-country-selector>
             {{ all_country_option_tags }}
           </select>
 
@@ -169,7 +170,15 @@
     }
 
     initCustomerAddress() {
-      console.log("HelloWorld")
+      const allAddressesSelector = document.querySelectorAll("select[data-country-selector]")
+      if (allAddressesSelector.length < 1) 
+        return;
+      
+
+
+
+      console.log(allAddressesSelector);
+
     }
 
   }
