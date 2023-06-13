@@ -114,7 +114,7 @@
             <p>{{ credit_card_last_four_digits }}</p>
 
             {% case transaction.status_label %}
-              {% when 'Faliure' %}
+              {% when 'Failure' %}
               {% assign background = "red" %}
             {% else %}
               {% assign background = "green" %}
