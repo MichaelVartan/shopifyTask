@@ -114,10 +114,10 @@
             <p>{{ credit_card_last_four_digits }}</p>
 
             {% case transaction.status_label %}
-              {% when 'Failure' %}
-              {% assign background = 'red' %}
+              {% when 'Success' %}
+                {% assign background = 'green' %}
             {% else %}
-              {% assign background = 'green' %}
+                {% assign background = 'red' %}
             {% endcase %}
 
             <span class="bg-{{background}}-700 rounded-full text-sm px-4 py-1 text-white">{{ transaction.status_label }}</span>
