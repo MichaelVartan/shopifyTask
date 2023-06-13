@@ -223,7 +223,7 @@
       let option,
         selectedOption;
       for (let index = 0; index < index < select.options.length; index++) {
-        option = select.options[index];
+        option = select.option[index];
 
         if (option.value === select.getAttribute('value')) {
           selectedOption = option;
@@ -231,9 +231,8 @@
           break;
         }
       }
+
       return selectedOption;
-
-
     }
 
 
