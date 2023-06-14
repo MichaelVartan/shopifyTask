@@ -78,7 +78,10 @@
         {% endpaginate %}
       </div>
     {% else %}
-      <strong class="flex items-center font-medium mb-2 py-2">There are no comments in this article</strong>
+      <div class="flex-1 items-center justify-center mx-auto max-w-4xl px-4">
+        <h1 class="text-lg mb-4 font-medium">
+          There are no  in this article</h1>
+      </div>
     {% endif %}
   </div>
 
@@ -167,8 +170,8 @@
 
   {
   "@context": "http://schema.org",
-                              "@type": "BlogPosting",
-                              "headline": {{ article.title | json }},
+                        "@type": "BlogPosting",
+                        "headline": {{ article.title | json }},
   "articleBody":{{ article.content | strip_html | json }},
   {% if article.excerpt != blank %}
     "description": {{ article.excerpt | strip_html | json }},
@@ -181,12 +184,12 @@
   "datePublished": {{ article.published_at | date: format: "default" | json }},
   "dateCreated": {{ article.created_at | date: format: "default" | json }},
   "author":{
-                              "@type": "Person",
-                              "name": {{ article.author | json }}
+                        "@type": "Person",
+                        "name": {{ article.author | json }}
   },
   "publisher":{
-                              "@type": "Organization",
-                              "name": {{ shop.name | json }}
+                        "@type": "Organization",
+                        "name": {{ shop.name | json }}
   }
   }
 </script>
