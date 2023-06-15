@@ -868,6 +868,10 @@ video {
   width: 100vw;
 }
 
+.w-60 {
+  width: 15rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }

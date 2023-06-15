@@ -83,7 +83,7 @@
           {% render 'icon-shopping-bag' %}
         </button>
 
-        
+
 
         {% if shop.customer_accounts_enabled %}
           {% if customer %}
@@ -157,7 +157,9 @@
     </div>
   </div>
 
-  <div class="h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto overflow-x-auto z-50"></div>
+  <div x-show="cartDrawer" class="h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto z-50">
+    <div class="h-full w-60 bg-white"></div>
+  </div>
 
   <div x-show="searchBarOpen" class="w-full absolute top-0 bg-white border">
     <button
