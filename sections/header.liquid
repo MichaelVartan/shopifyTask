@@ -79,7 +79,10 @@
           {% render 'icon-search' %}
         </button>
 
-        <button x-on:click="cartDrawer = true" class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900">
+        <button
+          x-on:click="cartDrawer = true"
+          class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900"
+          id="cartBtn">
           {% render 'icon-shopping-bag' %}
         </button>
 
@@ -157,14 +160,14 @@
     </div>
   </div>
 
-  <div
-    x-show="cartDrawer"
-    x-trap.noscroll="cartDrawer"
-    class="flex flex-row-reverse h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto z-50">
+  <div x-show="cartDrawer" class="flex flex-row-reverse h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto z-50">
     <div class="relative max-w-md bg-white border top-20 p-4">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-lg font-medium">New address</h2>
-        <button @click="cartDrawer = false" class="text-gray-500">{% render 'icon-close' %}</button>
+        <button
+          @click="cartDrawer = false"
+          class="text-gray-500"
+          id="cartCloseBtn">{% render 'icon-close' %}</button>
       </div>
 
       {% form 'customer_address', customer.new_address %}
