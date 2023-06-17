@@ -180,11 +180,11 @@
               {% for item in cart.items %}
                 <ul class="flex flex-row justify-between items-center p-4 mb-2">
                   <li>
-                    <div class="p-2 m-2">
+                    <div class="p-2 m-2 w-full h-full">
                       <a href="{{ item.url }}">
                         {% if item.image %}
                           <img
-                            class="h-30 w-60 object-cover border"
+                            class="w-full h-full object-cover border"
                             src="{{ item.image | img_url: 'small' }}"
                             alt="{{ item.title | escape}}">
                         {% else %}
