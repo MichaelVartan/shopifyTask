@@ -1,7 +1,4 @@
 (() => {
-	const cartButton = document.querySelector('#cartBtn');
-	const closeCartButton = document.querySelector('#cartCloseBtn');
-
 	function onOpenButtonClick() {
 		document.body.style.overflow = 'hidden';
 	}
@@ -10,6 +7,9 @@
 		document.body.style.overflow = 'initial';
 	}
 
-	cartButton.onclick = onOpenButtonClick;
-	closeCartButton.onclick = onCloseButtonClick;
+	const cartButton = document.querySelector('#cartBtn');
+	const closeCartButton = document.querySelector('#cartCloseBtn');
+
+	cartButton.addEventListener('click', onOpenButtonClick);
+	closeCartButton.addEventListener('click', onCloseButtonClick);
 })();
