@@ -24,7 +24,7 @@
         <p class="text-gray-500">{{ product_product.price | money }}</p>
       </div>
       <div>
-        {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
+        {% form 'product', product_product, id: 'product-form', novalidate: 'novalidate' %}
 
           <button
             type="submit"
@@ -35,7 +35,7 @@
             {% if selected_variant.available == false %}
               Sold Out
             {% else %}
-              Add To Ca7
+              Add To Cart
             {% endif %}
 
           </button>
