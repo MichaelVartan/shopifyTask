@@ -173,7 +173,10 @@
             </button>
           </div>
           <div class="mb-4">
-            <form action="{{ routes.cart_url }}"method="POST"novalidate>
+            <form
+              action="{{ routes.cart_url }}"
+              method="POST"
+              novalidate>
               {% for item in cart.items %}
                 <ul class="flex flex-row justify-between items-center p-4 mb-2">
                   <li>
@@ -181,7 +184,7 @@
                       <a href="{{ item.url }}">
                         {% if item.image %}
                           <img
-                            class="h-20 w-20 object-cover border"
+                            class="h-full w-full object-cover border"
                             src="{{ item.image | img_url: 'small' }}"
                             alt="{{ item.title | escape}}">
                         {% else %}
