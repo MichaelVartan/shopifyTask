@@ -1,3 +1,4 @@
+<script src="../assets/miniCartHeader.js"></script>
 {% liquid 
     if section.settings.menu.links == blank
         assign main_menu_linklist = linklists[section.settings.menu].links
@@ -79,7 +80,10 @@
           {% render 'icon-search' %}
         </button>
 
-        <button x-on:click="cartDrawer = true; document.body.style.overflow = 'hidden'" class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900" id="miniCartBtn">
+        <button
+          x-on:click="cartDrawer = true; document.body.style.overflow = 'hidden'"
+          class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900"
+          id="miniCartBtn">
           {% render 'icon-shopping-bag' %}
         </button>
 
