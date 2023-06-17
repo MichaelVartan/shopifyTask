@@ -1,6 +1,7 @@
 (() => {
-	const miniCart = document.querySelector('miniCart');
 	async function getMiniCart() {
+		const miniCart = document.querySelector('miniCart');
+
 		try {
 			const response = await fetch('?section_id=template-cart');
 			if (response.status < 400) {
@@ -14,6 +15,9 @@
 		}
 	}
 
-	const btn = document.querySelector('#miniCartBtn');
-	btn.addEventListener('click', getMiniCart);
+	function onWindowLoad() {
+		const btn = document.querySelector('#miniCartBtn');
+		btn.addEventListener('click', getMiniCart);
+	}
+	window.onload = onWindowLoad;
 })();
