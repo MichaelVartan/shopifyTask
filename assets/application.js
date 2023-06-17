@@ -3,7 +3,7 @@
 		const miniCart = document.querySelector('miniCart');
 
 		try {
-			const response = await fetch('?section_id=template-cart');
+			const response = await fetch('https://drunkenself.myshopify.com/?section_id=template-cart');
 			if (response.status < 400) {
 				const section = await response.json();
 				miniCart.innerHTML = section;
