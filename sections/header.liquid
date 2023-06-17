@@ -1,28 +1,4 @@
-<script>
-  (() => {
-    async function getMiniCart() {
-      const miniCart = document.querySelector('miniCart');
 
-      try {
-        const response = await fetch('?section_id=template-cart');
-        if (response.status < 400) {
-          const section = await response.json();
-          miniCart.innerHTML = JSON.parse(section);
-        } else {
-          alert('Error from server');
-        }
-      } catch (err) {
-        alert(err.message);
-      }
-    }
-
-    function onWindowLoad() {
-      const btn = document.querySelector('#miniCartBtn');
-      btn.addEventListener('click', getMiniCart);
-    }
-    window.onload = onWindowLoad;
-  })();
-</script>
 {% liquid 
     if section.settings.menu.links == blank
         assign main_menu_linklist = linklists[section.settings.menu].links
@@ -187,7 +163,9 @@
   <div x-show="cartDrawer" class="h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto z-50">
     <div class="flex flex-row-reverse ">
       <div class="flex flex-col h-full w-full relative max-w-md bg-white border p-4">
-        <div id="miniCart"></div>
+        <div class="mb-4">
+          <h1 class="text-center text-3xl font-bold">Your Cart</h1>
+        </div>
       </div>
     </div>
   </div>
