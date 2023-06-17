@@ -24,19 +24,7 @@
         <p class="text-gray-500">{{ product_product.price | money }}</p>
       </div>
       <div>
-        <button
-          type="submit"
-          name="add"
-          class="w-30 h-30 py-4 px-6 bg-gray-900 text-white hover:bg-gray-700 rounded-sm my-2"
-          {% if selected_variant.available == false %}disabled{% endif %}>
-
-          {% if selected_variant.available == false %}
-            Sold Out
-          {% else %}
-            Add To Cart
-          {% endif %}
-
-        </button>
+       
       </div>
     </div>
   </div>
