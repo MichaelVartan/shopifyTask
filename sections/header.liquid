@@ -7,7 +7,7 @@
         const response = await fetch('?section_id=template-cart');
         if (response.status < 400) {
           const section = await response.json();
-          miniCart.innerHTML = JSON.stringify(section);
+          miniCart.innerHTML = JSON.parse(section);
         } else {
           alert('Error from server');
         }
