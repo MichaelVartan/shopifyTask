@@ -168,7 +168,7 @@
             <button
               type="button"
               @click="cartDrawer = false"
-              class="text-gray-500">
+              class="text-gray-500 absolute">
               {% render 'icon-close' %}
             </button>
           </div>
@@ -177,7 +177,7 @@
               {% for item in cart.items %}
                 <ul class="flex flex-row justify-between items-center p-4 mb-2">
                   <li>
-                    <div>
+                    <div class="p-2 m-2">
                       <a href="{{ item.url }}">
                         {% if item.image %}
                           <img
@@ -191,14 +191,14 @@
                     </div>
                   </li>
                   <li>
-                    <div>
+                    <div class="p-2 m-2">
                       <a href="{{ item.url }}" class="my1">{{ item.product.title | truncatewords: 5 }}</a>
                       <span class="text-sm text-gray-500 my-1">{{ item.variant.title }}</span>
                       <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0 " class="text-sm font-medium text-red-500 my-1">remove</a>
                     </div>
                   </li>
                   <li>
-                    <div>
+                    <div class="p-2 m-2">
                       <input
                         type="input"
                         name="updates[]"
@@ -209,7 +209,7 @@
                     </div>
                   </li>
                   <li>
-                    <div>
+                    <div class="p-2 m-2">
                       {{ item.line_price | money }}
                     </div>
                   </li>
@@ -217,7 +217,7 @@
               {% endfor %}
             </form>
           </div>
-          <div class="mb-4"></div>
+
         {% else %}
           <div class="mb-4 flex justify-between">
             <h1 class="text-center text-3xl font-bold">Your cart is empty</h1>
