@@ -9,7 +9,6 @@
 <div
   class="relative bg-white"
   x-data="{ mobileMenuOpen: false, searchBarOpen: false, cartDrawer:false }"
-  
   x-cloak>
   <div class="mx-auto px-4 sm:px-6">
     <div class="flex justify-center items-center py-6 md:justify-start md:space-x-10">
@@ -158,7 +157,10 @@
     </div>
   </div>
 
-  <div x-show="cartDrawer" x-trap.noscroll="cartDrawer" class="flex flex-row-reverse h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto z-50">
+  <div
+    x-show="cartDrawer"
+    x-trap.noscroll.important="cartDrawer"
+    class="flex flex-row-reverse h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto z-50">
     <div class="relative max-w-md bg-white border top-20 p-4">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-lg font-medium">New address</h2>
