@@ -165,6 +165,12 @@
         {% if cart.item_count > 0 %}
           <div class="mb-4">
             <h1 class="text-center text-3xl font-bold">Your Cart</h1>
+            <button
+              type="button"
+              @click="cartDrawer = false"
+              class="absolute top-0 right-0 mr-5 mt-5 text-gray-500">
+              {% render 'icon-close' %}
+            </button>
           </div>
           <div class="mb-4">
             <form action="{{ routes.cart_url }}"method="POST"novalidate>
