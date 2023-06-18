@@ -14,7 +14,7 @@
         action="{{ routes.cart_url }}"
         method="POST"
         novalidate>
-        <table class="table-auto divide-y divide-gray-200 my-4 w-full">
+        <table class="table-auto divide-y divide-gray-200 my-4 w-full border rounded-md">
           <thead>
             <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Product</th>
             <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Quantity</th>
@@ -22,7 +22,7 @@
           </thead>
           <tbody>
             {% for item in cart.items %}
-              <tr class="table-row border rounded-md m-2">
+              <tr class="table-row ">
                 <td class="py-4 px-2 flex flex-col justify-center">
                   <a href="{{ item.url }}">
                     {% if item.image %}
