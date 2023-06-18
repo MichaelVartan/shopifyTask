@@ -255,7 +255,7 @@
             <h1 class="text-center text-3xl font-bold">Your cart is empty</h1>
             <button
               type="button"
-              @click="cartDrawer = false"
+              @click="cartDrawer = false; document.body.style.overflow = 'initial'"
               class="text-gray-500 absolute top-0 right-0">
               {% render 'icon-close' %}
             </button>
