@@ -25,7 +25,10 @@
       </div>
       <div>
         {% form 'product', product_product, id: 'product-form', novalidate: 'novalidate' %}
-
+          <input
+            type="hidden"
+            name="id"
+            value="{{ selected_variant.id }}">
           <button
             type="submit"
             name="add"
