@@ -1,6 +1,6 @@
 {% assign selected_variant = product_product.selected_or_first_available_variant %}
 
-<div class="w-full py-6 px-3">
+<div class="w-full py-6 px-3" x-data="quickAddToCart:false">
   <div class="border bg-white shadow-lg rounded-lg overflow-hidden">
     <a href="{{ product_product.url }}">
       {% if product_product.featured_image %}
@@ -32,13 +32,13 @@
           <button
             type="submit"
             name="add"
-            class="w-full py-4 px-6 bg-gray-900 text-white hover:bg-gray-700 rounded-md my-2"
+            class="w-full py-4 px-6 bg-gray-900 text-white hover:bg-gray-700 rounded-md my-2 absolute hidden hover:visible"
             {% if selected_variant.available == false %}disabled{% endif %}>
 
             {% if selected_variant.available == false %}
               Sold Out
             {% else %}
-              Add To Cart
+              Quick Add
             {% endif %}
 
           </button>
