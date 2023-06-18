@@ -15,7 +15,41 @@
     "cart_notes_enable": true,
     "ajax_cart_method": "drawer",
     "social_twitter_link": "",
-    "social_facebook_link": ""
+    "social_facebook_link": "",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "4cdbad51-eba7-4b99-a5c8-81d723dc610c": {
+            "type": "update_button",
+            "settings": {
+            }
+          },
+          "b12bcf18-344f-4064-9f08-f1614b1961e3": {
+            "type": "checkout_button",
+            "settings": {
+            }
+          },
+          "ec5e10ad-e33a-4db2-b5ff-ca5eea025061": {
+            "type": "subtotal",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "4cdbad51-eba7-4b99-a5c8-81d723dc610c",
+          "b12bcf18-344f-4064-9f08-f1614b1961e3",
+          "ec5e10ad-e33a-4db2-b5ff-ca5eea025061"
+        ],
+        "settings": {
+          "mobile_menu_title": "Menu",
+          "menu": "main-menu"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
