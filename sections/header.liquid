@@ -198,7 +198,7 @@
                     <div class="p-2 m-2">
                       <a href="{{ item.url }}" class="my1">{{ item.product.title | truncatewords: 5 }}</a>
                       <span class="text-sm text-gray-500 my-1">{{ item.variant.title }}</span>
-                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0 " class="text-sm font-medium hover:text-red-500 my-1">{% render 'icon-trash' %}</a>
+                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0 " class="text-sm font-medium hover:text-red-500 my-1 text-center">{% render 'icon-trash' %}</a>
                     </div>
                   </li>
                   <li>
