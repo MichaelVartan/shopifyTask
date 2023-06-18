@@ -7,7 +7,7 @@
 %}
 
 <div
-  class="relative bg-white sticky fixed"
+  class="relative bg-white"
   x-data="{ mobileMenuOpen: false, searchBarOpen: false, cartDrawer:false }"
   x-cloak>
   <div class="mx-auto px-4 sm:px-6">
@@ -167,59 +167,58 @@
             <h1 class="text-center text-3xl font-bold">Your Cart</h1>
             <button
               type="button"
-              @click="cartDrawer = false; document.body.style.overflow = 'initial'"
+              @click="cartDrawer = false"
               class="text-gray-500 absolute top-0 right-0">
               {% render 'icon-close' %}
             </button>
           </div>
-          <div class="mb-4 flex flex-col my-10">
+          <div class="mb-4">
             <form
               action="{{ routes.cart_url }}"
               method="POST"
               novalidate>
-              <div>
-                {% for item in cart.items %}
-                  <ul class="flex flex-row justify-between items-center p-4 mb-2 border border-gray-600 rounded-full">
-                    <li>
-                      <div class="p-2 m-2 w-full h-full">
-                        <a href="{{ item.url }}">
-                          {% if item.image %}
-                            <img
-                              class="w-full h-full object-cover border"
-                              src="{{ item.image | img_url: 'medium' }}"
-                              alt="{{ item.title | escape}}">
-                          {% else %}
-                            {{ 'product-1' | placeholder_svg_tag: 'w-20 h-20 object-cover border' }}
-                          {% endif %}
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="p-2 m-2">
-                        <a href="{{ item.url }}" class="my1">{{ item.product.title | truncatewords: 5 }}</a>
-                        <span class="text-sm text-gray-500 my-1">{{ item.variant.title }}</span>
-                        <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0 " class="text-sm font-medium hover:text-red-500 my-1 text-center">{% render 'icon-trash' %}</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="p-2 m-2">
-                        <input
-                          type="input"
-                          name="updates[]"
-                          value="{{ item.quantity }}"
-                          min="1"
-                          id="updates_{{ forloop.index }}"
-                          class="w-20 border p-2 controls">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="p-2 m-2">
-                        {{ item.line_price | money }}
-                      </div>
-                    </li>
-                  </ul>
-                {% endfor %}
-              </div>
+              {% for item in cart.items %}
+                <ul class="flex flex-row justify-between items-center p-4 mb-2 border border-gray-600 rounded-full">
+                  <li>
+                    <div class="p-2 m-2 w-full h-full">
+                      <a href="{{ item.url }}">
+                        {% if item.image %}
+                          <img
+                            class="w-full h-full object-cover border"
+                            src="{{ item.image | img_url: 'medium' }}"
+                            alt="{{ item.title | escape}}">
+                        {% else %}
+                          {{ 'product-1' | placeholder_svg_tag: 'w-20 h-20 object-cover border' }}
+                        {% endif %}
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-2 m-2">
+                      <a href="{{ item.url }}" class="my1">{{ item.product.title | truncatewords: 5 }}</a>
+                      <span class="text-sm text-gray-500 my-1">{{ item.variant.title }}</span>
+                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0 " class="text-sm font-medium hover:text-red-500 my-1 text-center">{% render 'icon-trash' %}</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-2 m-2">
+                      <input
+                        type="input"
+                        name="updates[]"
+                        value="{{ item.quantity }}"
+                        min="1"
+                        id="updates_{{ forloop.index }}"
+                        class="w-20 border p-2 controls">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-2 m-2">
+                      {{ item.line_price | money }}
+                    </div>
+                  </li>
+                </ul>
+              {% endfor %}
+
               <div>
                 {% for block in section.blocks %}
                   {% case block.type %}
@@ -255,7 +254,7 @@
             <h1 class="text-center text-3xl font-bold">Your cart is empty</h1>
             <button
               type="button"
-              @click="cartDrawer = false; document.body.style.overflow = 'initial'"
+              @click="cartDrawer = false"
               class="text-gray-500 absolute top-0 right-0">
               {% render 'icon-close' %}
             </button>
