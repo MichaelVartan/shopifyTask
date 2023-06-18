@@ -52,11 +52,11 @@
 <script>
   function onWindowLoad() {
     const quickAdd = document.querySelector("#quickAddToCart");
-    quickAdd.addEventListener("mouseover", () => {
+    quickAdd.addEventListener("mouseenter", () => {
       const btnQuick = document.querySelector("#quickAddSpan");
       btnQuick.style.visibility = 'visible'
     });
-    quickAdd.addEventListener("mouseout", () => {
+    quickAdd.addEventListener("mouseleave", () => {
       const btnQuick = document.querySelector("#quickAddSpan");
       btnQuick.style.visibility = 'hidden'
     });
