@@ -50,19 +50,16 @@
 
 
 <script>
-  function quickAddVisible() {
-    const btnQuick = document.querySelector("#quickAddSpan");
-    btnQuick.style.visibility = 'visible'
-  }
-
-  function quickAddHidden() {
-    const btnQuick = document.querySelector("#quickAddSpan");
-    btnQuick.style.visibility = 'hidden'
-  }
   function onWindowLoad() {
     const quickAdd = document.querySelector("#quickAddToCart");
-    quickAdd.addEventListener("mouseover", quickAddVisible);
-    quickAdd.addEventListener("mouseout", quickAddHidden);
+    quickAdd.addEventListener("mouseover", () => {
+      const btnQuick = document.querySelector("#quickAddSpan");
+      btnQuick.style.visibility = 'visible'
+    });
+    quickAdd.addEventListener("mouseout", () => {
+      const btnQuick = document.querySelector("#quickAddSpan");
+      btnQuick.style.visibility = 'hidden'
+    });
   }
 
   window.onload = onWindowLoad
