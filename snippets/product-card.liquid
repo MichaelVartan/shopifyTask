@@ -29,7 +29,7 @@
             type="hidden"
             name="id"
             value="{{ selected_variant.id }}">
-          <span
+          <button
             class="w-full py-4 px-6 bg-gray-900 text-white hover:bg-gray-700 rounded-md my-2 hidden"
             id="quickAddSpan"
             {% if selected_variant.available == false %}disabled{% endif %}>
@@ -40,7 +40,7 @@
               + Quick Add
             {% endif %}
 
-          </span>
+          </button>
         {% endform %}
 
       </div>
