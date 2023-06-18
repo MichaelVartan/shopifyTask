@@ -1,6 +1,6 @@
 {% assign selected_variant = product_product.selected_or_first_available_variant %}
 
-<div class="w-full py-6 px-3" x-data="quickAddToCart:false">
+<div class="w-full py-6 px-3" id="quickAddToCart">
   <div class="border bg-white shadow-lg rounded-lg overflow-hidden">
     <a href="{{ product_product.url }}">
       {% if product_product.featured_image %}
@@ -29,22 +29,41 @@
             type="hidden"
             name="id"
             value="{{ selected_variant.id }}">
-          <button
-            type="submit"
-            name="add"
-            class="w-full py-4 px-6 bg-gray-900 text-white hover:bg-gray-700 rounded-md my-2 absolute hidden hover:auto"
+          <span
+            class="w-full py-4 px-6 bg-gray-900 text-white hover:bg-gray-700 rounded-md my-2 absolute"
+            id="quickAddSpan"
             {% if selected_variant.available == false %}disabled{% endif %}>
 
             {% if selected_variant.available == false %}
               Sold Out
             {% else %}
-              Quick Add
+              + Quick Add
             {% endif %}
 
-          </button>
+          </span>
         {% endform %}
 
       </div>
     </div>
   </div>
 </div>
+
+
+<script>
+  function quickAddVisible() {
+    const btnQuick = document.querySelector("#quickAddSpan");
+    btnQuick.style.visibility = 'visible'
+  }
+
+  function quickAddHidden() {
+    const btnQuick = document.querySelector("#quickAddSpan");
+    btnQuick.style.visibility = 'hidden'
+  }
+  function onWindowLoad() {
+    const quickAdd = document.querySelector("#quickAddToCart");
+    quickAdd.addEventListener("mouseover", quickAddVisible);
+    quickAdd.addEventListener("mouseout", quickAddHidden);
+  }
+
+  window.onload = onWindowLoad
+</script>
