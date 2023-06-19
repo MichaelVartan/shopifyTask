@@ -629,6 +629,18 @@ video {
   bottom: 2rem;
 }
 
+.left-3 {
+  left: 0.75rem;
+}
+
+.bottom-12 {
+  bottom: 3rem;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
 .z-10 {
   z-index: 10;
 }
