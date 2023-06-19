@@ -1,3 +1,4 @@
+{{ 'cart-drawer.css.liquid' | asset_url | stylesheet_tag }}
 <div class="cart-drawer">
   <div class="cart-drawer-box">
     {% comment %} Header section {% endcomment %}
@@ -72,7 +73,5 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Cart drawer"
-  }
+  {"name": "Cart drawer"}
 {% endschema %}
