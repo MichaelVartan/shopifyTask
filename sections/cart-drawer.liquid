@@ -1,4 +1,5 @@
-
+{{ 'main.js' | asset_url | | script_tag }}
+{{ 'cart-drawer.css' | asset_url | stylesheet_tag }}
 <div class="cart-drawer">
   <div class="cart-drawer-box">
     {% comment %} Header section {% endcomment %}
