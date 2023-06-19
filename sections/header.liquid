@@ -8,7 +8,7 @@
 
 <div
   class="relative bg-white"
-  x-data="{ mobileMenuOpen: false, searchBarOpen: false, cartDrawer:false }"
+  x-data="{ mobileMenuOpen: false, searchBarOpen: false }"
   x-cloak>
   <div class="mx-auto px-4 sm:px-6">
     <div class="flex justify-center items-center py-6 md:justify-start md:space-x-10">
@@ -79,10 +79,7 @@
           {% render 'icon-search' %}
         </button>
 
-        <button
-          x-on:click="cartDrawer = true; document.body.style.overflow = 'hidden'"
-          class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900"
-          id="miniCartBtn">
+        <button class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900">
           {% render 'icon-shopping-bag' %}
         </button>
 
@@ -156,110 +153,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div x-show="cartDrawer" class="h-full w-full fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto z-50">
-    <div class="flex flex-row-reverse">
-      <div class="flex flex-col min-h-full w-full relative max-w-md bg-white border p-4">
-        {% if cart.item_count > 0 %}
-          <div class="mb-4">
-            <h1 class="text-center text-3xl font-bold">Your Cart</h1>
-            <button
-              type="button"
-              @click="cartDrawer = false"
-              class="text-gray-500 absolute top-0 right-0">
-              {% render 'icon-close' %}
-            </button>
-          </div>
-          <div class="mb-4">
-            <form
-              action="{{ routes.cart_url }}"
-              method="POST"
-              novalidate>
-              {% for item in cart.items %}
-                <ul class="flex flex-row justify-between items-center p-4 mb-2 border border-gray-600 rounded-full">
-                  <li>
-                    <div class="p-2 m-2 w-full h-full">
-                      <a href="{{ item.url }}">
-                        {% if item.image %}
-                          <img
-                            class="w-full h-full object-cover border"
-                            src="{{ item.image | img_url: 'medium' }}"
-                            alt="{{ item.title | escape}}">
-                        {% else %}
-                          {{ 'product-1' | placeholder_svg_tag: 'w-20 h-20 object-cover border' }}
-                        {% endif %}
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="p-2 m-2">
-                      <a href="{{ item.url }}" class="my1">{{ item.product.title | truncatewords: 5 }}</a>
-                      <span class="text-sm text-gray-500 my-1">{{ item.variant.title }}</span>
-                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0 " class="text-sm font-medium hover:text-red-500 my-1 text-center">{% render 'icon-trash' %}</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="p-2 m-2">
-                      <input
-                        type="input"
-                        name="updates[]"
-                        value="{{ item.quantity }}"
-                        min="1"
-                        id="updates_{{ forloop.index }}"
-                        class="w-20 border p-2 controls">
-                    </div>
-                  </li>
-                  <li>
-                    <div class="p-2 m-2">
-                      {{ item.line_price | money }}
-                    </div>
-                  </li>
-                </ul>
-              {% endfor %}
-
-              <div>
-                {% for block in section.blocks %}
-                  {% case block.type %}
-                    {% when 'subtotal' %}
-                    <h3 class="text-xl">Subtotal: {{ cart.total_price | money }}</h3>
-
-                    {% when 'update_button' %}
-                    <div class="my-2">
-                      <button
-                        name="update"
-                        type="submit"
-                        class="w-full p-3 border border-gray-600 text-gray-600 font-medium hover:bg-gray-600 hover:text-white">Update</button>
-
-                    </div>
-                    {% when 'checkout_button' %}
-                    <div class="my-2">
-                      <button
-                        name="checkout"
-                        type="submit"
-                        class="w-full p-3 border border-gray-600 text-gray-600 font-medium hover:bg-gray-600 hover:text-white">Checkout</button>
-                    </div>
-
-                {% else %}
-
-                  {% endcase %}
-                {% endfor %}
-              </div>
-            </form>
-          </div>
-
-        {% else %}
-          <div class="mb-4">
-            <h1 class="text-center text-3xl font-bold">Your cart is empty</h1>
-            <button
-              type="button"
-              @click="cartDrawer = false"
-              class="text-gray-500 absolute top-0 right-0">
-              {% render 'icon-close' %}
-            </button>
-          </div>
-        {% endif %}
       </div>
     </div>
   </div>
