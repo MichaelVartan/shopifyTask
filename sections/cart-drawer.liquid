@@ -1,5 +1,4 @@
-{{ 'cart-drawer.css' | asset_url | stylesheet_tag }}
-<div class="cart-drawer--active">
+<div class="cart-drawer">
   <div class="cart-drawer-box">
     {% comment %} Header section {% endcomment %}
     <header class="cart-drawer-header">
@@ -73,5 +72,7 @@
 </div>
 
 {% schema %}
-  {"name": "Cart drawer"}
+  {
+    "name": "Cart drawer"
+  }
 {% endschema %}
