@@ -5,7 +5,12 @@
       <h2>Your cart</h2>
 
       <div class="cart-drawer-header-right">
-        <span class="cart-drawer-header-right-items">{{ cart.item_count }} items</span>
+        {% if cart.item_count < 2 %}
+          <span class="cart-drawer-header-right-items">{{ cart.item_count }} item</span>
+        {% else %}
+          <span class="cart-drawer-header-right-items">{{ cart.item_count }} items</span>
+        {% endif %}
+
 
         <button class="cart-drawer-header-right-close" type="button">
           {% render 'icon-close' %}
