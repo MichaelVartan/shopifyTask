@@ -7,9 +7,16 @@
         "featured_collection": "all",
         "number_of_products_to_show": 6
       }
+    },
+    "ec925ecf-db37-4056-89f0-696124e8c679": {
+      "type": "contact-form",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
-    "featured-collection"
+    "featured-collection",
+    "ec925ecf-db37-4056-89f0-696124e8c679"
   ]
 }
