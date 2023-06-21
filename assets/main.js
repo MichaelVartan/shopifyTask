@@ -36,9 +36,7 @@ function addCartDrawerListeners() {
 		.forEach((button) => {
 			button.addEventListener('click', async () => {
 				// Get line item key
-				const rootItem =
-					button.parentElement.parentElement.parentElement.parentElement
-						.parentElement;
+				const rootItem = button.closest('.cart-drawer-item');
 				const key = rootItem.getAttribute('data-line-item-key');
 
 				// Get new quantity
@@ -76,7 +74,6 @@ function addCartDrawerListeners() {
 		.querySelectorAll('.cart-drawer-header-right-close, .cart-drawer')
 		.forEach((el) => {
 			el.addEventListener('click', () => {
-				console.log('closing drawer');
 				closeCartDrawer();
 			});
 		});
