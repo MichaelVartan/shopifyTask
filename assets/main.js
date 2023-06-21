@@ -19,7 +19,8 @@ function updateCartItemCounts(count) {
 async function updateCartDrawer() {
 	const res = await fetch('/?section_id=cart-drawer');
 	const text = await res.text();
-	const html = `<div>${text}</div>`;
+	const html = document.createElement('div');
+	html.innerHTML = text;
 
 	const newBox = html.querySelector('.cart-drawer').innerHTML;
 
